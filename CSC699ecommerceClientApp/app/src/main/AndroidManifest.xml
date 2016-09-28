@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.mattdenisbeck.csc699ecommerceclient">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity
+                android:name=".MainActivity"
+                android:label="@string/app_name"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".ProductDetail"
+                android:label="@string/title_activity_product_detail"
+                android:parentActivityName=".MainActivity"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.mattdenisbeck.csc699ecommerceclient.MainActivity"/>
+        </activity>
+        <activity
+                android:name=".ViewCart"
+                android:label="@string/title_activity_view_cart"
+                android:parentActivityName=".ProductDetail"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.mattdenisbeck.csc699ecommerceclient.ProductDetail"/>
+        </activity>
+        <activity
+                android:name=".Checkout"
+                android:label="@string/title_activity_checkout"
+                android:parentActivityName=".ViewCart"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.mattdenisbeck.csc699ecommerceclient.ViewCart"/>
+        </activity>
+    </application>
+
+</manifest>

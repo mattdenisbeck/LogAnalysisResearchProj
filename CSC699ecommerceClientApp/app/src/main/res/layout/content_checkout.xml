@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:screenOrientation="portrait" android:weightSum="1"
+              android:focusable="true">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Billing/Shipping Address"
+                android:id="@+id/txtBillingShippingTitle" android:layout_marginLeft="5dp" android:layout_marginTop="5dp"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                          android:layout_height="wrap_content" android:layout_marginLeft="5dp"
+                          android:gravity="left">
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/edtFName" android:autoText="false" android:textColor="#86000000"
+                    android:hint="First Name"/>
+            <EditText android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:inputType="textPersonName" android:ems="10" android:id="@+id/edtLName"
+                      android:autoText="false" android:textColor="#86000000" android:hint="Last Name"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                          android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:gravity="left">
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:ems="10"
+                    android:id="@+id/edtStreetAddress" android:textColor="#86000000" android:hint="Street Address"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                          android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:gravity="left">
+            <EditText android:layout_width="196dp" android:layout_height="wrap_content"
+                      android:inputType="textPostalAddress" android:ems="10" android:id="@+id/edtCity"
+                      android:textColor="#86000000" android:hint="City"/>
+            <EditText android:layout_width="78dp" android:layout_height="wrap_content"
+                      android:inputType="textPostalAddress" android:ems="10" android:id="@+id/edtState"
+                      android:textColor="#86000000" android:hint="State"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/edtZIP" android:textColor="#86000000"
+                    android:linksClickable="true" android:numeric="integer" android:hint="ZIP"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                          android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:gravity="left">
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/edtPhone" android:phoneNumber="true"
+                    android:textColor="#86000000" android:hint="Phone"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                          android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:gravity="left">
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:ems="10" android:id="@+id/edtEmail" android:phoneNumber="false"
+                      android:textColor="#86000000" android:inputType="textWebEmailAddress" android:hint="Email"/>
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:textAppearance="?android:attr/textAppearanceLarge" android:text="Payment Info"
+                      android:id="@+id/textView2" android:layout_marginLeft="5dp" android:layout_marginTop="5dp"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                          android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:gravity="left">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Credit Card?"
+                    android:id="@+id/txtCCTitle" android:layout_gravity="center_vertical"/>
+            <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal" android:gravity="center_horizontal"
+                    android:id="@+id/ccTypeGroup">
+                <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Visa"
+                        android:id="@+id/rbtnVisa" android:layout_marginRight="5dp"
+                        android:textColor="#86000000"/>
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                             android:text="MasterCard" android:id="@+id/rbtnMasterCard" android:layout_marginRight="5dp"
+                             android:textColor="#86000000"/>
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                             android:text="Discover" android:id="@+id/rbtnDiscover" android:textColor="#86000000"/>
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                          android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:gravity="left">
+            <EditText
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/edtCCNumber" android:textColor="#86000000" android:hint="Card Number"/>
+            <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="number"
+                      android:ems="10" android:id="@+id/edtCVV" android:textColor="#86000000"
+                      android:hint="CVV"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:gravity="bottom" android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                          android:layout_height="wrap_content" android:layout_gravity="right" android:layout_marginLeft="5dp"
+                          android:gravity="right">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textAppearance="?android:attr/textAppearanceMedium" android:text="Subtotal: $"
+                          android:id="@+id/txtSubtotalTitle" android:gravity="center_vertical"
+                          android:layout_gravity="center_vertical" android:singleLine="true"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textAppearance="?android:attr/textAppearanceMedium" android:text="0.00"
+                          android:id="@+id/txtSubtotal" android:gravity="center_vertical"
+                          android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                              android:layout_height="wrap_content" android:layout_gravity="right" android:layout_marginLeft="5dp"
+                              android:gravity="right">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textAppearance="?android:attr/textAppearanceMedium" android:text="+ Shipping: $"
+                          android:id="@+id/txtShippingTitle" android:gravity="center_vertical"
+                          android:layout_gravity="center_vertical"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textAppearance="?android:attr/textAppearanceMedium" android:text="0.00"
+                          android:id="@+id/txtShipping" android:gravity="center_vertical" android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                          android:layout_height="wrap_content" android:layout_gravity="right" android:layout_marginLeft="5dp"
+                          android:gravity="right"
+            >
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textAppearance="?android:attr/textAppearanceMedium" android:text="+ Sales Tax: $"
+                          android:id="@+id/txtTatTitle" android:gravity="center_vertical"
+                          android:layout_gravity="center_vertical"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textAppearance="?android:attr/textAppearanceMedium" android:text="0.00"
+                          android:id="@+id/txtTax" android:gravity="center_vertical"
+                          android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="________________________________"
+                    android:id="@+id/textView" android:layout_gravity="top|right"/>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_gravity="left" android:layout_marginLeft="5dp"
+                    android:gravity="left">
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Submit Order?"
+                        android:id="@+id/btnSubmitOrder" android:layout_gravity="right"/>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent" android:gravity="right" android:layout_gravity="right"
+                        android:showDividers="middle|beginning|end">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Total Due: $"
+                            android:id="@+id/totalTitle" android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical" android:textStyle="bold|italic"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="0.00"
+                            android:id="@+id/txtTotal" android:gravity="center_vertical" android:layout_gravity="center_vertical"
+                            android:textStyle="bold|italic"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
